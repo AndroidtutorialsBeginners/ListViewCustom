@@ -29,12 +29,15 @@ public class CustomAdapter extends ArrayAdapter<Details> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
        View view = LayoutInflater.from(mcontext).inflate(R.layout.list_row,null);
-        TextView name , de;
-        name = (TextView) view.findViewById(R.id.name);
-        de = (TextView) view.findViewById(R.id.details);
+        TextView name, de, age;
+        name = view.findViewById(R.id.name);
+        de = view.findViewById(R.id.details);
+        age = view.findViewById(R.id.age);
         Details details1 = details.get(position);
         name.setText(details1.getAuthor());
         de.setText(details1.getDetails());
+        age.setText(details1.getAge());
+
 
         return view;
     }

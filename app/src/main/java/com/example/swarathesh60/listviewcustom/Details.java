@@ -5,11 +5,21 @@ package com.example.swarathesh60.listviewcustom;
  */
 
 public class Details {
-    String author,details;
+    String author, details, age;
 
-    public Details(String author, String details) {
+    public Details(String author, String details, String age) {
         this.author = author;
         this.details = details;
+        this.age = age;
+
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public String getAuthor() {
